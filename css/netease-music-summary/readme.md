@@ -6,3 +6,6 @@
    musicBtn.classList.add('off');
    设定延迟
    transion delay opacity 可见不可见
+   百度css格式化 
+   选中格式，open in tab复制代码
+   steps()平均分成多少段，运动时间也平分
