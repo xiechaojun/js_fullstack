@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>name</td>
+                <td>age</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script>
+        const tbody = document.getElementById('tbody');
+        const person = {
+            name:'韩梅梅',
+            age:'18',
+        }
+        const people = [
+            {
+            name:'韩梅梅',
+            age:'18',
+        },
+        {
+            name:'李雷',
+            age:'18',
+        }
+        ]
+        // <tr>
+        //         <td>韩梅梅</td>
+        //         <td>18</td>
+        //     </tr>
+        const str = `<tr>
+                        <td>${person.name}</td>
+                        <td>${person.age}</td>
+                    </tr>`
+        tbody.innerHTML = str;//innerHTML可读可写
+        const arr = ['ecut','ecit'];
+        // arr.join可以把数组拼接成字符串（控制台输入）arr.join（' '）可以指定空格连接，不输入则默认,
+    </script>
+</body>
+
+</html>
