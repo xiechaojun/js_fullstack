@@ -14,7 +14,10 @@
 
         }
         // function是对象的一种 是可以被运行的对象
-        Interface
+        // static静态方法
+        Interface.ensureImplements = function(object){
+            return true;
+        }
         var BicycleSop = function (){};
         BicycleSop.prototype={
             sellBicycle:function(model){
