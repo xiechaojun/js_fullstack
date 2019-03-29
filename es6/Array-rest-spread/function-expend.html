@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function expend</title>
+</head>
+<body>
+    <script>
+        //es5的时候赋予默认值两种常见的做法
+        function Person (name){
+            //赋予默认值
+            // if (!name){
+            //     name = 'default name';
+            // }
+            this.name = name || 'default name';
+        }
+        const p1 = new Person('cst');//会返回{name:cst}
+        const p2 = new Person(); //{name:'default name'}
+        // es6
+        function Person (name = 'default name'){
+            this.name = name;
+        }
+
+        const p1 = new Person('cst');
+        const p2 = new Person(); 
+
+        //rest 参数 形式（...变量名）
+        //作用：获取多余参数
+        //搭配的变量是一个数组
+        // 剩余参数必须是在最后一个位置
+        const arrow_sum = (a, ...args) => {// 加个a就获取第一项，剩下的为多余，拼接成数组
+            console.log(a, args);
+        }
+        arrow_sum(1,2,3,4);
+    </script>
+</body>
+</html>

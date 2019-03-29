@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [18,19,30];
+        var aa =arr[0], bb = arr[1],cc = arr[2];  //es5
+        // 解构 数组的解构（把数组里的每一项都赋予给前面的变量）
+        // const [a,b,c] = arr;//[18,19,30]
+        // 数组嵌套，前面也嵌套
+        const [a,[b],c] = [18,[20],30]
+        // 单独解构某一项
+        const [, ,d] = [18,[20],30]
+    </script>
+</body>
+</html>

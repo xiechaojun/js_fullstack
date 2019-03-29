@@ -1,0 +1,118 @@
+html {
+    color: #111;
+    background: #fff;
+  }
+  body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote {
+    margin: 0;
+    padding: 0;
+  }
+  body, td, th {
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+  }
+  ul,li{
+      list-style: none;
+  }
+  a{
+      cursor: pointer;
+  }
+  body {
+    padding-top: 30px;
+  }
+  #anony-nav{
+      width: 950px;
+      margin: 0 auto -25px;
+  }
+  #anony-nav .anony-nav-links{
+      float: right;
+      margin-top: 6px;
+  }
+  #anony-nav .anony-nav-links li {
+      display: inline-block;
+      zoom: 1;
+      margin: 0 0 0 17px;
+  }
+  a:link{
+    color:#37a;
+    text-decoration: none;  
+  }
+  a:visited{
+      color:#669;
+      text-decoration: none;
+  }
+  #anony-nav .anony-nav-links li a{
+      display: inline-block;
+      zoom: 1;
+      width: 40px;
+      height: 20px;
+      overflow: hidden;
+      margin: 0;
+      line-height: 20em;
+      outline:none;
+      vertical-align: middle;
+      background: transparent url(./images.anony_nav_logo.png)no-repeat 100% 100%;
+      background-image: -webkit-image-set(url(./images.anony_nav_logo.png) 1x, url(./images.anony_nav_logo@2x.png) 2x);
+  }
+  #anony-nav .anony-nav-links li .lnk-book{
+      background-position: 0 0;
+  }
+  #anony-nav .anony-nav-links li .lnk-movie{
+      background-position: -60px 0;
+  }
+  #anony-nav .anony-nav-links li .lnk-music{
+      background-position: -120px 0;
+  }
+  #anony-nav .anony-nav-links li .lnk-group{
+      background-position: -180px 0;
+  }
+  #anony-nav .anony-nav-links li .lnk-events{
+      background-position: -299px 0;
+  }
+  #anony-nav .anony-nav-links li .lnk-fm{
+      background-position: -241px 0;
+  }
+  #anony-nav .anony-nav-links li .lnk-shijian{
+      margin-bottom: 1px;
+      background: transparent url(./1..png) no-repeat 100% 100%;
+      background-image: -webkit-image-set(url(./1..png) 1x, url(./1..png) 2x);
+  }
+  #anony-nav .anony-nav-links li .lnk-market{
+      background-position: -421px 0;
+  }
+  h1{
+      word-wrap: break-word;
+      color: #494949;
+      line-height: 1.1;
+  }
+  #anony-nav h1{
+      display: inline-block;
+      zoom: 1;
+      vertical-align: middle;
+      width: 160px;
+      height: 30px;
+      margin: 0 20px 0 0;
+      padding: 0;
+      font-size: 12px;
+      font-weight: normal;
+      background: url(./2.png) no-repeat 0 0;
+      background-image: -webkit-image-set(url(./2.png) 2x);
+  }
+  #anony h1 a {
+      display: block;
+      height: 34px;
+      line-height: 10em;
+  }
+  #anony-nav .anony-srh{
+      position: relative;
+      display: inline-block;
+      zoom: 1;
+      vertical-align: middle;
+      width: 270px;
+      height: 30px;
+      border:1px solid #c3c3c3;
+  }
+  form{
+      margin: 0;
+      padding: 0;
+      border: 0px;
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>类数组</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+//根据长度来改变
+const obj = {
+                0: 1,
+                1: 2,
+                2: 3,
+                length:3
+            }
+            //es5时候讲传入的参数整理为数组的方式
+        function sum(){
+            // 类数组对象arguments 
+            // 可以索引arguments[0],arguments[1]可以取到值
+            // 有length属性
+
+           
+            const lis = document.querySelectorAll('li');
+            const lis_arr = Array.from(lis);//变成真数组
+
+
+            // Array.from可以从一个类数组中创建一个真数组
+            const args = Array.from(arguments);
+            console.log(args.map);
+            //return[2,4,6,8]
+        }
+        sum(1,2,3,4);
+
+        const arr = [2,4,6,8];
+        const newArr = arr.map(ele => 2*ele);
+        // 扩大两倍 //newArr = [4,8,12,16]  //.map
+    </script>
+</body>
+</html>
