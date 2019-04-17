@@ -34,6 +34,16 @@
                 // 截屏 拍屏
                 // stream canvas 画布，
                 // context.drawImage(videoNode,0,0, canvas.width,canvas.height);
+                // 把图片下载到本地？
+                download(canvas.toDataURL('image/jpeg'));
+                function download(src){
+                    // console.log(src);
+                    //js模拟点击
+                    const a = document.createElement('a');
+                    a.setAttribute('download',new Date());
+                    a.href= src;
+                    a.click();
+                }
             })
     </script>
 </body>
