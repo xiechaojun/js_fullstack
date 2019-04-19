@@ -1,0 +1,23 @@
+{
+  "name": "js_fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiechaojun/js_fullstack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiechaojun/js_fullstack/issues"
+  },
+  "homepage": "https://github.com/xiechaojun/js_fullstack#readme",
+  "dependencies": {
+    "sha1": "^1.1.1"
+  }
+}
