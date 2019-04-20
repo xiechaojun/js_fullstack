@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        // 字符串也有Length属性
+        let arr = [1,2,3,4,5]    
+        function res(num){
+            let s = num.toString()
+            let a = []
+            for (let i = 0;i < s.length;i++){
+                a.unshift(s[i])
+            }
+            return a.join('')
+            // console.log(s[0])   console.log(s.length)
+        }
+        console.log(res(arr))
+    </script> -->
+    <script>
+        function minNumber(numbers){
+            // return numbers.sort()
+            numbers.sort(compare)    //sort不能实现多位排序 ，支持里面放置回调函数
+            let res = '';
+            for (let i = 0; i < numbers.length;i++){
+                res += numbers[i]
+            }
+            return res
+        }
+        function compare(a,b){
+            let str1 = a + "" + b   //23    //字符串拼接""
+            let str2 =  b + "" + a   //32
+            // console.log(str1.charAt(0))
+            // console.log(str1)
+            // console.log(str2)
+            for (let i = 0; i < str1.length;i++){
+                if (str1.charAt(i) > str2.charAt(i)){
+                    return 1
+                }
+                if (str1.charAt(i) < str2.charAt(i)){
+                    return -1
+                }
+            }
+            return 1
+        }
+        // minNumber([3,54,585,69,42,8])
+        // console.log(minNumber([3,54,585,69,42,8]))
+        // compare(2,3)
+        console.log(32,4,61,9,14)
+
+    </script>
+</body>
+</html>
