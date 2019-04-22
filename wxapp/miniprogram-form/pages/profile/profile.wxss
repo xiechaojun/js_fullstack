@@ -1,0 +1,4 @@
+.formLists{
+    display: flex;
+    justify-content: space-between;
+}
