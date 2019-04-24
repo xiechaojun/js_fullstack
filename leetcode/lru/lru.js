@@ -8,7 +8,16 @@ var LRUCache = function (capacity){
     this.arr = [];
 }
 LRUCache.prototype.get = function (key){
-
+    var val = this.obj[key];
+    if (val > 0) {
+        // 最近最少使用;
+        var index = this.arr.indexOf(key);
+        this.arr.splice(index,1);
+        this.arr.unshift(key);
+        return val;
+    }else{
+        return -1;
+    }
 }
 LRUCache.prototype.set = function (key,val){
     // 之前已存在
@@ -28,3 +37,12 @@ LRUCache.prototype.set = function (key,val){
     this.obj[key] = val;  //存好了
     this.arr.unshift(key);  //最近最常使用
 }
+
+var cache = new LRUCache(2);
+cache.set(1,1);
+cache.set(2,2);
+console.log(cache.get(1));
+cache.set(3,3);
+console.log(cache.get(2));
+cache.set(4,4);
+console.log(cache.get(1));

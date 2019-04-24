@@ -1,0 +1,28 @@
+<!-- pages/main/index.wxml -->
+<view class="container">
+  <scroll-view>
+    <view class="header">
+      <view class="header_hd" bindtap="goLocaltion">
+        <text>{{city}}</text>
+        <view class="downtips"></view>
+      </view>
+      <view class="header_bd">
+        <view class="header_bd-hot header_bd-btn">正在上映</view>
+        <view class="header_bd-waiting header_bd-btn">即将上映</view>
+      </view>
+      <view class="header_ft">
+        <image src="../../images/icon_magnifier.png"></image>
+      </view>
+    </view>
+
+    <swiper indicator-dots="true" autoplay="true" interval="3000">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image class="slide-image" src="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  
+  </scroll-view>
+</view>

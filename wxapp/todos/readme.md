@@ -1,0 +1,13 @@
+- wxml 只是模板，不像html5,   
+    看到的是Page，不是wxml,而是编译过后的wxml，  js data 拿去模板生成page view
+- 登录 登录后 
+    页面不是静态的，dom ajax
+    小程序的动态是通过MVVM来实现的  登录前后是不同的状态
+- wxml {{}} 或者指令 data 加相应的数据项就好
+    this.setData({})  设置数据 并且带来数据相应部分UI的重新渲染
+    小程序是数据驱动界面的应用  响应式编程 
+    跟DOM say goodbye      
+    MVVM 数据决定一切
+    数据状态   ===  界面状态
+    登录状态 hasUserInfo 
+    userInfo:{} 负责数据驱动界面

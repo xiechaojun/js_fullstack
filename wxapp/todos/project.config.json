@@ -12,9 +12,9 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.5",
+	"libVersion": "2.6.6",
 	"appid": "wxf22d90471127e1e8",
-	"projectname": "wxapplearn",
+	"projectname": "todos",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
