@@ -7,7 +7,7 @@
 - 组件的数据 data(内部数据) + properties(外部数据)
 - properties 里的 observer 接收到值改变时执行  观察者
 - 从内向外触发事件
-    内：this.triggerEvent({
+    内：this.triggerEvent({m[]
         "event_name",
         data
     })
@@ -17,4 +17,4 @@
 - 由外传入的properties 由内传出的事件
 Page 和 Components 就成了不可分割的有机体
 
-喜马拉雅 掘金活动  小米商城  京东商城  
+喜马拉雅 掘金活动  小米商城  京东商城    
