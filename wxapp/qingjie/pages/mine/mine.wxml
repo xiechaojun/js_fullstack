@@ -1,0 +1,7 @@
+<!-- pages/mine/mine.wxml -->
+<view class="container">
+<!-- 顶部信息栏 -->
+    <view class="msg">
+        
+    </view>
+</view>
