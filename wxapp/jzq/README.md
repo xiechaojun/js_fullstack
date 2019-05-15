@@ -9,3 +9,4 @@ libs/ game engine
 - adapter.js 适配
     小程序是使用canvas来写游戏的 
     小游戏里不支持DOM BOM 
+    开发方式和h5游戏一样，

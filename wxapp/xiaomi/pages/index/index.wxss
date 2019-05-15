@@ -123,5 +123,29 @@
   margin-top: 0rpx;
   background: #fff;
 }
-
-
+.goods-item{
+  width: 360rpx;
+  margin-bottom: 30rpx;
+}
+.goods-item:nth-child(1),.goods-item:nth-child(2){
+  margin-top: 8rpx;
+}
+.goods-item .goods-img{
+  position: relative;
+  width: 360rpx;
+  height: 360rpx;
+  box-shadow:0 0 6rpx #dcdcdc;
+}
+.goods-img.new:before{  /*新品标签样式*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  content:"新品";
+  color:#fff;
+  font-size: 9pt;
+  text-align: center;
+  background: #8cc64a;
+}
