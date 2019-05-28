@@ -20,7 +20,7 @@ const oauth = async ctx => {
   // console.log(str);
   // code => token
   const requestToken = ctx.request.query.code;
-  const token_url = 'https://github.com/login/oauth/access_token ? ' +
+  const token_url = 'https://github.com/login/oauth/access_token?' +
     `client_id=${clientID}&` +
     `client_secret=${clientSecret}&` +
     `code=${requestToken}`;
