@@ -2,6 +2,8 @@
   <div class="main-content">
     <Header></Header>
     <Slide></Slide>
+    <!-- 路由入口 -->
+    <router-view></router-view> 
   </div>
 </template>
 

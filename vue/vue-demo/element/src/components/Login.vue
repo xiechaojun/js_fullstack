@@ -9,7 +9,7 @@
         <el-input v-model="password" placeholder="请输入密码"></el-input>
       </div>
       <div class="btn mt20">
-        <el-button type="primary" v-on:click="login">主要按钮</el-button>
+        <el-button type="primary" v-on:click="login">登录</el-button>
         <!-- <router-link to='./HelloWorld'>
           <el-button type='primary' @click='login'>主要按钮</el-button>
         </router-link>-->
