@@ -3,11 +3,14 @@ const Koa = require('koa');
 const views = require('koa-views');
 const ejs = require('ejs');
 const path = require('path');
+// 处理请求数据 
+const koaBody = require('koa-body');
 // 方便区分不同的路径
 // const router = new Router();
 const app = new Koa();
 const router = require('./router');
-
+// 往ctx上面加东西
+app.use(koaBody());
 app.use(
   views(path.join(__dirname,'./views'),{
     extension:'ejs'
