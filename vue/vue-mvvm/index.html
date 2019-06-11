@@ -58,6 +58,7 @@
               return data['_' + key]
             },
             set(newVal) {
+              console.log(newVal);
               obv.update(newVal);
               data['_' + key] = newVal;
             }
@@ -73,6 +74,7 @@
             // 发生订阅关系的时候
 
             Observer.target = child;
+            // get
             this.opt.data[key]
             Observer.target = null;
           } else if (child.firstElement) {
