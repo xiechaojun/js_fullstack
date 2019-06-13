@@ -3,6 +3,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Goods from '@/components/goods/goods'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -14,6 +15,11 @@ export default new Router({
     // }
     {
       path: '/',
+      name: 'Goods',
+      component: Goods
+    },
+    {
+      path: '/goods',
       name: 'Goods',
       component: Goods
     }

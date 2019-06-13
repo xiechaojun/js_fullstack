@@ -60,6 +60,6 @@ export default {
         color rgb(77,85,93)
         text-decoration none  // a标签有默认样式要干掉 下划线 
 
-        &.active
+        &.router-link-active
           color rgb(240,20,20)
 </style>
