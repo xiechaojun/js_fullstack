@@ -7,12 +7,12 @@
         <div class="manage-tip">
           <span class="title">后台管理系统</span>
         </div>
-        <el-form :model="loginForm" :rules="rules" ref="loginForm" class="loginForm">
+        <el-form :model="loginForm" :rules="rules" ref="loginFrom" class="loginForm">
           <el-form-item props="username">
             <span class="fa-tips">
               <i class="fa fa-user"></i>
             </span>
-            <el-input class="area" type="text" placeholder="用户名" v-model="loginFrom.username"/>
+            <el-input class="area" type="text" placeholder="用户名" v-model="loginForm.username"/>
           </el-form-item>
         </el-form>
       </section>
