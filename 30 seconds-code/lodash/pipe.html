@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore-min.js"></script>
+  <script>
+    //string:
+    //1.转为小写
+    //2.拼接一个字符串
+    //3.split为一个数组
+    // var s = '123'
+    // s.toLowerCase
+    const lowCase = (str) => str.toLowerCase();
+    const add = str => `${str} hello world`;
+    const splitStr = str => str.split(' ');
+
+    const combineFun = _.compose(splitStr,add,lowCase); //从后往前运行
+    console.log(combineFun('HEXO'));
+    //["hexo","hello","world"]
+    // 函数式编程
+    // 组合
+    // 管道
+    function pipe(...fns) {
+      return fns.reduce((prev,next) => {   //reduce能一次拿到两项  组合？
+        // lowCase add 返回add(lowCase())
+        // 返回add(lowCase()) splitStr  splitStr(add(lowCase()))
+        // pipeFun === splitStr(add(lowCase()))
+        return (...arg) => next(prev(...arg))
+      })
+    }
+    // compose 和 pipe  上面的函数反一下next 和 prev
+    
+    const pipeFun = pipe(lowCase,add,splitStr);  //从前往后运行
+    // splitStr(add(lowCase()))    //效果一样
+    console.log(pipeFun('HEXO'));
+  </script>
+</body>
+</html>
