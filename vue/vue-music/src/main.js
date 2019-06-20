@@ -4,18 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastclick from 'fastclick'
-import Vuelazyload from 'vue-lazyload'
+import VueLazyload from 'vue-lazyload'
 import store from './vuex/store'
 
 import def_lazy_img from '../static/img/loading.gif'
 Vue.use(VueLazyload, {
-  loading: def_lazy_img
+  loading: def_lazy_img,
 })
+
 fastclick.attach(document.body)
 
 Vue.config.productionTip = false
-import {Toast,Loading} from '@/common/plugin'
-
+import { Toast, Loading } from '@/common/plugin'
 Vue.use(Toast)
 Vue.use(Loading)
 
@@ -23,7 +23,7 @@ Vue.use(Loading)
 new Vue({
   el: '#app',
   router,
-  store, 
+  store,
   components: { App },
   template: '<App/>'
 })
