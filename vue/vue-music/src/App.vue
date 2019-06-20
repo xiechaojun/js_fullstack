@@ -4,16 +4,31 @@
     <v-header>
       <i slot="left-icon" class="icon">&#xe692;</i>
       <span slot="content">Magic Music</span>
+      <router-link to="/user" slot="right-icon">
+        <i class="icon">&#xe63c;</i>
+      </router-link>
     </v-header>
+    <!-- tab -->
+    <v-tab></v-tab>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <!-- play -->
+    <!-- sidebar -->
+    <v-sidebar></v-sidebar>
   </div>
 </template>
 
 <script>
 import header from '@/components/header'
+import tab from '@/components/tab'
+import sidebar from '@/components/sidebar'
 export default {
   name: 'App',
   components:{
-    'v-header':header
+    'v-header':header,
+    'v-tab':tab,
+    'v-sidebar':sidebar
   }
 }
 
