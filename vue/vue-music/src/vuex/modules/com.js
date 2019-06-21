@@ -2,7 +2,7 @@ import api from '../../api'
 import * as types from '../types'
 
 const state = {
-  showSidebar:true
+  showSidebar:false
 }
 const mutations = {
   [types.COM_SHOW_SIDE_BAR] (state,status) {

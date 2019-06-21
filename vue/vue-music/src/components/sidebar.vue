@@ -15,6 +15,7 @@
           <li @click="_hidebar">
             <router-link to="/user" @click="_hidebar">
               <i class="icon">&#xe63c;</i>
+
               <span>个人中心</span>
             </router-link>
           </li>
