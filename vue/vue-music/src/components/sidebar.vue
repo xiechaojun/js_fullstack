@@ -4,15 +4,15 @@
       <div class="head">
         <div class="avatar">
           <img
-            src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1669572525,3085745453&fm=27&gp=0.jpg"
+            src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3047945920,1830841676&fm=26&gp=0.jpg"
             alt
           >
         </div>
-        <div class="name">杀马特</div>
+        <div class="name">华仔</div>
       </div>
       <div class="menu">
         <ul>
-          <li>
+          <li @click="_hidebar">
             <router-link to="/user" @click="_hidebar">
               <i class="icon">&#xe63c;</i>
               <span>个人中心</span>
@@ -51,18 +51,26 @@
         </ul>
       </div>
     </div>
+    <div v-show="showSidebar" class="sidebar_mask" @click="_hidebar"></div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      showSidebar:true
     }
   },
+  computed: {
+    ...mapGetters([
+      'showSidebar'
+    ])
+  },
   methods: {
-    _hidebar(){}
+    _hidebar(){
+      this.$store.dispatch('setShowSidebar',false)
+    }
   },
 };
 </script>
