@@ -7,7 +7,7 @@ var cors = require('cors');
 // 验证一下身份信息 session next 
 // 表单处理 parseBody next
 // 跨域 一件事 cors
-app.use(cors);
+app.use(cors());
 // next
 app.get('/products/:id',function(req,res,netx) {
   res.json({
