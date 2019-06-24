@@ -17,6 +17,7 @@
     <v-play></v-play>
     <!-- sidebar -->
     <v-sidebar></v-sidebar>
+    <!-- search -->
   </div>
 </template>
 
