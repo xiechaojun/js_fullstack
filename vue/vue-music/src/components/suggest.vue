@@ -32,11 +32,13 @@
 
 <script>
 import scroll from "@/components/scroll";
+import api from "@/api"
+const limit = 20
 export default {
   name:'suggest',
   props:{
     query:{
-      type:string,
+      type:String,
       default:''
     }
   },
@@ -51,6 +53,40 @@ export default {
   },
   components: {
     "v-scroll": scroll
+  },
+  methods: {
+    refresh() {
+      this.$refs.suggest.refresh()
+    },
+    fetchResult(page){
+      const params = { 
+        limit,
+        offset:oage - 1,
+        keywords:this.query
+      }
+      api.MusicSearch(params).then(res => {
+        if (res.code === 200){
+          console.log(res)
+        }
+      })
+    },
+    search(){
+      this.page = 1
+      this.hasMore = true
+      this.$refs.suggest.scrollTo(0,0)
+      this.result = []
+      this.fetchResult(this.page)
+    },
+    searchMore(){},
+    listScroll(){}
+  },
+  watch:{
+    query (newQuery) {
+      if (newQuery) {
+        return 
+      }
+      this.search(newQuery)
+    }
   }
 };
 </script>
