@@ -11,7 +11,7 @@ Page({
     autoplay:true,
     interval:2000,
     duration:1000,
-    nnav_data:[],
+    nav_data:[],
     index_activity:[],
     index_block:[],
     isTap:false,

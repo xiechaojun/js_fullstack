@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
   <!-- 顶部搜索栏 -->
-  <view class="selection searchBar">
+  <view class="section searchBar">
     <view class="section searBar-box {{isTap?'tap':''}}">
       <image src="../../assets/icons/search.png" mode="aspectFill" class="search-icon" />
-      <input type="text" name="searchBar" disable="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch"/>
+      <input type="text" name="searchBar" disabled="true" placeholder="搜索商品" placeholder-class="search-plac" bindtap="toSearch"/>
     </view>
   </view>
   <!-- <end-section search searBar> -->
@@ -22,7 +22,7 @@
   <!-- 商品导航分类 -->
   <view class="section navBar">
     <view class="section nav-list" wx:for="{{nav_data}}" wx:key="index">
-      <navigator url="{{item.nav_urls}}" hover-clas="none">
+      <navigator url="{{item.nav_urls}}" hover-class="none">
         <view class="nav-item">
           <image src="{{item.nav_img}}" class="item-img" />
           <text class="item-text">{{item.nav_title}}</text>
