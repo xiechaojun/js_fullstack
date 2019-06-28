@@ -74,7 +74,7 @@ export default {
       })
     }
   },
-  created () {
+  created () { 
     this._getHotKey()
   }
 }

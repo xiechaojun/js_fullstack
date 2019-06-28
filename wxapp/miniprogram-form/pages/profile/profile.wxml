@@ -36,7 +36,7 @@
       </view>
       <checkbox-group name="hobby">
         <label>
-          <checkbox value="basketball" />
+          <checkbox value="basketball"/>
           篮球
         </label>
         <label>
@@ -58,5 +58,5 @@
       <text>{{item.switch}}</text>
       <text> {{item.sex}}</text>
       <text>{{item.hobby}}</text>   
-  </view>
+  </view> 
 </view>
