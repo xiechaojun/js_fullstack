@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div class="search-box-wrapper">
-      <!-- 搜索框 (直接加ref 用$refs.searchBox调用)-->
+      <!-- 搜索框 -->
       <v-search-box @query="onQueryChange" ref="searchBox"></v-search-box>
     </div>
     <div class="shortcut-wrapper" ref="shortcutWrapper" v-show="!query">
@@ -49,12 +49,12 @@ import searchList from '@/components/searchList'
 import suggest from '@/components/suggest'
 import api from '@/api'
 import { mapGetters } from 'vuex'
-import  {searchMixin} from '@/common/mixin.js'
+import { searchMixin } from '@/common/mixin.js'
 export default {
   data () {
     return {
       shortcut: [],
-      hotKey: [],
+      hotKey: []
     }
   },
   components: {
@@ -63,7 +63,7 @@ export default {
     'v-search-list': searchList,
     'v-suggest': suggest
   },
-  mixins:[searchMixin],
+  mixins: [searchMixin],
   methods: {
     showConfirm () {},
     _getHotKey () {
@@ -74,7 +74,7 @@ export default {
       })
     }
   },
-  created () { 
+  created () {
     this._getHotKey()
   }
 }
