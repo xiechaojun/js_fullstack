@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 关于call,bind,apply -->
+  <script>
+  var a = {
+    user:'万万',
+    fn:function (n,m,f) {
+      console.log(this.user)
+      console.log(n + m + f )
+    }
+  }
+//1.// b指向全局，所以是undefined
+  // var b = a.fn
+  // b()
+  //2.a.fn() //a调用了它所以是 万 
+
+  // var b = a.fn
+  // b.call(a,5)  //b的作用域指向a
+  
+  // var b = a.fn
+  // b.apply(a,[-1,3])
+
+  var b = a.fn
+  var c = b.bind(a,5,2)
+  c(3,4)
+  </script>
+</body>
+</html>
