@@ -55,7 +55,7 @@ class Label extends Component {
 
   handleChange = ({ fileList }) => this.setState({ fileList });
   handleCancel = () => this.setState({ previewVisible: false });
-
+  
   render() {
     const { spinning, fileList,previewVisible,previewImage } = this.state;
     const uploadButton = (
@@ -93,7 +93,7 @@ class Label extends Component {
             <img alt="example" style={{ width: '100%' }} src={previewImage} />
           </Modal>
         </div>
-
+        <h1 title="这是一个h1">h1</h1>
       </div>
     );
   }
