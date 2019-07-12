@@ -28,3 +28,8 @@
 2. postMessage 用于在两个窗口之间传递数据
 3. 前端页面 同过postMessage 向后端目录下面的html传递接口需要的请求参数
 4. 后端页面 通过 postMessage 向前端页面传递 接口结果
+
+## iframe + window.name
+iframe 共享 window.name
+
+## jsonp
