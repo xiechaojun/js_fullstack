@@ -33,7 +33,7 @@
       height: 1000px;
       position: absolute;
       top: 0;
-      /* left: -200px; */
+      left: -200px;
       background: red;
     }
   </style>
@@ -47,10 +47,23 @@
     // 复用
     const container = document.getElementById('container');
     const actionContainer = document.getElementById('action-container') 
+    const action = document.getElementById('action');
     const drawer = new Drawer({
-      enterDOM:continer,
+      enterDOM:container,
       leaveDOM:actionContainer,
     })
+    let state = true;
+    if(action) {
+      action.addEventListener('click',() => {
+        if (state) {
+          state = false;
+          drawer.enter();
+        } else {
+          state = true;
+          drawer.leave();
+        }
+      })
+    }
   </script>
 </body>
 
